@@ -42,7 +42,8 @@ namespace FFmpeg_Recorder
         private void chronStop(int sleep, Process proc)
         {
             Thread.Sleep(sleep);
-            proc.Kill();
+            proc.CloseMainWindow();
+            MessageBox.Show("Stream Registrato :)");
         }
 
         private void insertTime(object sender, System.Windows.Controls.TextChangedEventArgs e)
